@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="icon" href="image/anya.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="image/anya1.png" alt="logo" 
+            height="60">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html">Biography</a></li>
+                    <li><a href="nanami.html">Professional Experience</a></li>
+                    <li><a href="gojo.html">References</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="mailto:annkaigu@gmail.com">Email</a>
+        </header>
+        
+        <div id="Biography">
+            <div class="container">
+                <div class="row">
+                    <div class="Biography-col-2">
+                        <h2>References</h2>
+                        <div class="tabs">
+                            <p class="pd active-link" onclick="opentab('books')">Books</p>
+                            <p class="pd active-link" onclick="opentab('papers')">Papers</p>
+                            <p class="pd" onclick="opentab('links')">Links</p> 
+                        </div>
+                        <div class="content active" id="books">
+                            <ul>
+                                <li><span>2016<br></span>Midwifery and child birth</li>
+                                <li><span>2017<br></span>Rehabilitation of the spine</li>
+                                <li><span>2019<br></span>Contraceptives</li>
+                                <li><span>2020<br></span>Covid variants</li>
+                            </ul>
+
+                        </div>
+                        <div class="content" id="papers">
+                            <ul>
+                                <li><span>Daily Nation 16/4/2018<br></span>Poly-cystic Ovary Syndrome</li>
+                                <li><span>The Standard 7/9/2020<br></span>Scoliosis in teenagers</li>
+                                <li><span>Pulse 3/5/2022<br></span>Sexual health</li>
+                            </ul>
+
+                        </div>
+                        <div class="content" id="links">
+                            <ul>
+                                <li><span><a href="https://en.wikipedia.org/wiki/Polycystic_ovary_syndrome" target="_blank">Polycystic Ovary Syndrome</a><br></span></li>
+                                <li><span><a href="https://www.niams.nih.gov/health-topics/scoliosis" target="_blank">Scoliosis</a><br></span></li>
+                                <li><span><a href="https://www.who.int/news-room/fact-sheets/detail/hypertension#" target="_blank">Hypertension</a><br></span></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="form">
+                        <form name="submit-to-google-sheet">
+                            <label for="fname">Full Name:</label>
+                            <input type="text" name="fname"required placeholder="Nanami Kento"><br>
+                            <label for="email">Email</label>
+                            <input type="text"name="email" placeholder="gojosatoru@gmail.com" required><br>
+                            <label for="phone">Phone n.o:</label>
+                            <input type="tel"id="phone" name="phone"placeholder="+254712345678" required><br>
+                            <label for="bdate">Birthdate:</label>
+                            <input type="date" name="bdate"><br>
+                            <br>
+                            <label for="status">Status:</label>
+                            <select name="status">
+                                <option>Employed</option>
+                                <option>Unemployed</option>
+                                <option>Student</option>
+                            </select><br>
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <a href="" class="active"></a>
+            <a href="index.html" class="active">1</a>
+            <a href="nanami.html" class="active">2</a>
+            <a href="gojo.html" class="active">3</a>
+            <a href="" class="active"></a>
+        </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("pd");
+        var tabcontents=document.getElementsByClassName("content");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active");
+        }
+    </script>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzQqOalsjvqXzJhtargzGKbSAgE6dbQjfD4cK-LoNJayfkEkLuNmm3LY-gYKMNQygyQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+
+    </script>
+
+</body>
+</html>

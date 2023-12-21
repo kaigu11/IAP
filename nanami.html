@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        </style>
+        <link rel="icon" href="image/anya.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="image/anya1.png" alt="logo" 
+            height="60">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html">Biography</a></li>
+                    <li><a href="nanami.html">Professional Experience</a></li>
+                    <li><a href="gojo.html">References</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="mailto:annkaigu@gmail.com">Email</a>
+        </header>
+        <div id="Biography">
+            <div class="container">
+                <div class="row">
+                    <div class="Biography-column-2">
+                        <h2>Professional Experience</h2>
+                        <div class="tabs">
+                            <p class="pd active-link" onclick="opentab('aar')">AAR Hospital</p>
+                            <p class="pd" onclick="opentab('aga')">Aga Khan University Hospital</p> 
+                            <p class="pd" onclick="opentab('embu')">Embu Level 5 Hospital</p> 
+                        </div>
+                        <div class="content active-link" id="aar">
+                            <ul>
+                                <li><span>Roles and Responsibilities<br></span></li>
+<li>Assessing the patient’s condition on arrival at the department and prioritizing care based on the critical nature and severity of the patient’s condition.</li>
+<li>Providing quality immediate emergency care according to patient’s needs while adhering to proper safety and sterilization protocols and techniques to ensure proper infection control.</li>
+<li>Collaborating with various healthcare professionals including doctors, pharmacists, radiographers and physiotherapists to ensure effective patient care.</li>
+<li>Documentation of relevant data related to patients’ care including assessment results, interventions, medications, patient responses, or treatment changes.</li>
+<li>Providing clerical support and documentation for admissions, transfers and discharges</li>
+                                
+                            </ul>
+
+                        </div>
+                        <div class="content active-link" id="aga">
+                            <ul>
+                                <li><span>Roles and Responsibilities<br></span></li>
+<li>Planning, organizing and carrying out healthcare outreach services</li>
+<li>Providing essential health education and healthcare checkups to community members including: blood pressure monitoring, blood sugar level checks, BMI and nutritional counselling, blood sample collection for cholesterol level check and blood donation drives, breast cancer, prostate cancer and cervical cancer screening.</li>
+                        </div>
+                        <div class="content active" id="embu">
+                            <ul>
+                                <li><span>Roles and Responsibilities<br></span></li>
+<li>General Nursing: Medical nursing, Surgical nursing, Casualty/ Outpatient department, Pediatrics nursing, Theatre nursing and Intensive care nursing.</li>
+<li>Midwifery and Reproductive Health: Prenatal, gender and youth friendly services, Labor and delivery ward, Special care baby unit, Puerperium, Labor ward theatre and Gynecology ward.</li>
+<li>Community Health Nursing: Family planning services, Pre-natal services, Postnatal services, Child health services, Curative/ outreach services and Comprehensive care clinic.</li>
+<li>Mental Health and Psychiatric Nursing.</li>
+<li>Curriculum and instruction: Classroom teaching at Kenya Medical Training College, Embu.</li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+        
+        <div class="pagination">
+            <a href="" class="active"></a>
+            <a href="index.html" class="active">1</a>
+            <a href="nanami.html" class="active">2</a>
+            <a href="gojo.html" class="active">3</a>
+            <a href="" class="active"></a>
+        </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("pd");
+        var tabcontents=document.getElementsByClassName("content");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active");
+        }
+    </script>
+</body>
+</html>

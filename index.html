@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="icon" href="image/anya.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="image/anya1.png" alt="logo" 
+            height="60">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html">Biography</a></li>
+                    <li><a href="nanami.html">Professional Experience</a></li>
+                    <li><a href="gojo.html">References</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="mailto:annkaigu@gmail.com">Email</a>
+        </header>
+        
+        <div id="Biography">
+            <div class="container">
+                <div class="row">
+                    <div class="Biography-col-1">
+                        <img src="image/kaigu.jpg">
+                    </div>
+                    <div class="Biography-col-2">
+                        <h2>Biography</h2>
+                        <div class="tabs">
+                            <p class="pd active-link" onclick="opentab('pers')">Personal details</p>
+                            <p class="pd" onclick="opentab('education')">Education</p>
+                            <p class="pd" onclick="opentab('lc')">Licensure and Certification</p> 
+                        </div>
+                        <div class="content active" id="pers">
+                            <ul>
+                                <li><span>Name<br></span>Ann Kaigu</li>
+                                <li><span>Date of Birth<br></span>3rd May 2003</li>
+                                <li><span>Nationality<br></span>Kenyan</li>
+                                <li><span>Address<br></span>P.O. Box 61894-00200</li>
+                                <li><span>Telephone<br></span>+254746463543</li>
+                            </ul>
+
+                        </div>
+                        <div class="content" id="education">
+                            <ul>
+                                <li><span>2012-2017:University of Nairobi<br></span>Bachelor of Science in Nursing (BSc.N)</li>
+                                <li><span>2008-2011:Karima Girls’ National School<br></span>K.C.S.E Grade: A (minus)</li>
+                                <li><span>2000-2007:Hezta Preparatory School<br></span>K.C.P.E 424 marks out of 500</li>
+                            </ul>
+
+                        </div>
+                        <div class="content" id="lc">
+                            <ul>
+                                <li><span>Registered nurse<br></span>Nursing Council of Kenya</li>
+                                <li><span>Basic life support (BLS)<br></span>American Heart Association</li>
+                                <li><span>Advanced Cardiac Life Support (ACLS)<br></span>American Heart Association</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <a href="" class="active"></a>
+            <a href="index.html" class="active">1</a>
+            <a href="nanami.html" class="active">2</a>
+            <a href="gojo.html" class="active">3</a>
+            <a href="" class="active"></a>
+        </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("pd");
+        var tabcontents=document.getElementsByClassName("content");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active");
+        }
+    </script>
+</body>
+</html>

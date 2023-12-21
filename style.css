@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+*{
+    box-sizing: border-box;
+    margin:0px;
+    font-family:'Poppins', sans-serif;
+    color:white;
+}
+body{
+    margin: 0px;
+    background-image: url(image/dark.jpeg);
+    background-size:cover;
+    
+
+}
+header{
+    display:flex;
+    justify-content:space-between;
+    border-radius: 10px;
+    align-items: center;
+    padding:20px 10%;
+    border-color: white;
+    background-color: rgb(58, 48, 68);
+}
+    
+.navbar ul{
+    list-style-type:none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+
+.logo{
+    cursor: pointer;
+
+}
+.navbar a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size:18px;
+    color: rgb(231, 143, 231);
+    display: block;
+    padding:20px 0px;
+}
+.navbar a:hover{
+    background-color: rgb(34, 21, 47);
+}
+.navbar li{
+    font-size: 18px;
+    display: inline-block;
+    list-style: none;
+    padding:0px 10px;
+}
+.cta{
+    text-decoration: none;
+    color: cyan;
+}
+.cta:hover{
+    background-color: rgb(34, 21, 47);
+}
+footer{
+    display:block;
+    clear:both;
+    text-align:left;
+    height:100px;
+
+}
+.pagination{
+    text-align: center;
+}
+.pagination a{
+    color:aqua;
+    text-decoration: none;
+    padding: 0 10px ;
+    display: inline-block;
+}
+.pagination a.active{
+    background-color:rgb(29, 40, 54);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+#Biography{
+    padding: 80px 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Biography-col-1{
+    flex-basis: 35%;
+}
+.Biography-col-1 img{
+    width:100%;
+    border-radius: 15px;
+}
+.Biography-col-2{
+    font-size: 30px;
+    flex-basis: 60%;
+}
+.tabs{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tabs p{
+    color:rgb(231, 143, 231);
+    border-radius: 5px;
+    border-color: white;
+    background-color: rgb(58, 48, 68);
+}
+.tabs p:hover{
+    background-color: rgb(223, 68, 169);
+}
+.pd{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor:pointer;
+    position: relative;
+}
+.pd.active-link::after{
+    width:50%;
+}
+.pd::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left:0;
+    bottom:8px;
+    transition: 0.5s;
+}
+.content ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.content ul li span{
+    color: rgb(231, 143, 231);
+    font-size: 14px;
+}
+.content{
+    display: none;
+}
+.content.active{
+    display: block;
+}
+
+#links a{
+    color: cyan;
+}
+
+.form{
+    flex-basis: 60%;
+}
+
+.form form{
+    width:70%;
+    position:relative;
+    background-color: rgb(34, 21, 47);
+
+}
+form button{
+    background-color: rgb(108, 17, 72);
+    display:inline-block;
+    width:100px;
+    font-size: 18px;
+    text-decoration: none;
+    border:none;
+    font-family:'Poppins', sans-serif;
+}
+form input, form textarea{
+    width:70%;
+    border:0px;
+    outline:non;
+    margin:15px 0;
+    color: black;
+    padding:15px;
+    font: 18px;
+    border-radius: 6px;
+}
+form select{
+    color:rgb(0, 0, 0);
+    width:50%;
+    border:0px;
+    outline:non;
+    margin:15px 0;
+    padding:15px;
+    font: 18px;
+    border-radius: 6px;
+}
+form option{
+    color:black;
+}
